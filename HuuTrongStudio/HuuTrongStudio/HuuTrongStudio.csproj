@@ -68,6 +68,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\assets\js\jquery-3.2.1.min.js" />
     <Content Include="Asset\backgroud.jpg" />
     <Content Include="Asset\Bagr.jpg" />
     <Content Include="Asset\Bgr.jpg" />
@@ -152,6 +153,7 @@
     <Content Include="Public\assets\js\update\jquery.bxslider.js" />
     <Content Include="Public\Home.aspx" />
     <Content Include="Style.css" />
+    <Content Include="Admin\UploadImage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -178,6 +180,13 @@
     <Compile Include="Public\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\UploadImage.aspx.cs">
+      <DependentUpon>UploadImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UploadImage.aspx.designer.cs">
+      <DependentUpon>UploadImage.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPage\assets\fonts\UTM Swiss Condensed.eot" />
@@ -202,9 +211,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\" />
     <Folder Include="MasterPage\assets\css\update\font-awesome\fonts\" />
     <Folder Include="Public\assets\css\update\font-awesome\fonts\" />
+    <Folder Include="Public\assets\js\new\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
