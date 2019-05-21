@@ -68,10 +68,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AdminDashboard.aspx" />
     <Content Include="Admin\assets\js\jquery-3.2.1.min.js" />
+    <Content Include="Admin\DichVu.aspx" />
     <Content Include="Asset\backgroud.jpg" />
     <Content Include="Asset\Bagr.jpg" />
     <Content Include="Asset\Bgr.jpg" />
+    <Content Include="Admin\LoaiDichVu.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MasterPage\assets\css\bootstrap-responsive.min.css" />
     <Content Include="MasterPage\assets\css\bootstrap.css" />
@@ -154,10 +157,33 @@
     <Content Include="Public\Home.aspx" />
     <Content Include="Style.css" />
     <Content Include="Admin\UploadImage.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminDashboard.aspx.designer.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DichVu.aspx.cs">
+      <DependentUpon>DichVu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DichVu.aspx.designer.cs">
+      <DependentUpon>DichVu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DBProvider\DataProvider.cs" />
+    <Compile Include="Admin\LoaiDichVu.aspx.cs">
+      <DependentUpon>LoaiDichVu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LoaiDichVu.aspx.designer.cs">
+      <DependentUpon>LoaiDichVu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -196,7 +222,9 @@
     <Content Include="MasterPage\assets\fonts\UTM Swiss CondensedBold.ttf" />
     <Content Include="MasterPage\assets\fonts\UTM Swiss CondensedBold.woff" />
     <Content Include="MasterPage\MaterPage.Master" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Public\assets\fonts\UTM Swiss Condensed.eot" />
     <Content Include="Public\assets\fonts\UTM Swiss Condensed.ttf" />
     <Content Include="Public\assets\fonts\UTM Swiss Condensed.woff" />

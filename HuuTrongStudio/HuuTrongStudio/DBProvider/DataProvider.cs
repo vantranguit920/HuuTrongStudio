@@ -11,13 +11,14 @@ namespace HuuTrongStudio.DBProvider
     {
         private static DataProvider Instance;
 
-        private string ConnectionSTR = "";
+        private string ConnectionSTR = "Data Source=DESKTOP-LPFVQ7N;Initial Catalog=AoCuoi;Integrated Security=True";
         private DataProvider() { }
 
-        public static DataProvider Instance1 {
+        public static DataProvider Instance1
+        {
             get { if (Instance == null) Instance = new DataProvider(); return Instance; }
-            private set { DataProvider.Instance = value;} 
-                                             }
+            private set { DataProvider.Instance = value; }
+        }
 
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
@@ -45,14 +46,10 @@ namespace HuuTrongStudio.DBProvider
                         }
                     }
                 }
-
                 SqlDataAdapter adapter = new SqlDataAdapter(command);//tạo adapter sql
-
                 adapter.Fill(data);//đổ dữ liệu vào biến data.
-
                 connection.Close();//đóng kết nối
             }
-
             return data;// trả về kết quả cho hàm
         }
 
