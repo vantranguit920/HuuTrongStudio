@@ -1091,7 +1091,6 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
   display: inline-block;
-  height: 20px;
   padding: 4px 6px;
   margin-bottom: 10px;
   font-size: 14px;
@@ -1106,7 +1105,6 @@ input[type="color"],
 input,
 textarea,
 .uneditable-input {
-  width: 206px;
 }
 
 textarea {
@@ -1181,12 +1179,10 @@ input[type="reset"],
 input[type="button"],
 input[type="radio"],
 input[type="checkbox"] {
-  width: auto;
 }
 
 select,
 input[type="file"] {
-  height: 30px;
   /* In IE7, the height of the select element cannot be changed by height, only font-size */
 
   *margin-top: 4px;
@@ -1196,14 +1192,12 @@ input[type="file"] {
 }
 
 select {
-  width: 220px;
   background-color: #ffffff;
   border: 1px solid #cccccc;
 }
 
 select[multiple],
 select[size] {
-  height: auto;
 }
 
 select:focus,
@@ -6156,4 +6150,7 @@ a.badge:focus {
 .affix {
   position: fixed;
 }
+/*#imgbanner {
+    height: 600px;
+}*/
 

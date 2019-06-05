@@ -71,6 +71,7 @@
     <Content Include="Asset\backgroud.jpg" />
     <Content Include="Asset\Bagr.jpg" />
     <Content Include="Asset\Bgr.jpg" />
+    <Content Include="Asset\img-bg-login.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="MasterPage\assets\css\bootstrap-responsive.min.css" />
     <Content Include="MasterPage\assets\css\bootstrap.css" />
@@ -90,12 +91,16 @@
     <Content Include="MasterPage\assets\img\4.jpg" />
     <Content Include="MasterPage\assets\img\arrows.png" />
     <Content Include="MasterPage\assets\img\backgroud.jpg" />
+    <Content Include="MasterPage\assets\img\backgroud2.jpg" />
     <Content Include="MasterPage\assets\img\banner.jpg" />
+    <Content Include="MasterPage\assets\img\banner2.jpg" />
+    <Content Include="MasterPage\assets\img\bgrGadient.jpg" />
     <Content Include="MasterPage\assets\img\bg_direction_nav.png" />
     <Content Include="MasterPage\assets\img\blurred-bg.jpg" />
     <Content Include="MasterPage\assets\img\bullets.png" />
     <Content Include="MasterPage\assets\img\glyphicons-halflings-white.png" />
     <Content Include="MasterPage\assets\img\glyphicons-halflings.png" />
+    <Content Include="MasterPage\assets\img\img-bg2.jpg" />
     <Content Include="MasterPage\assets\img\loading.gif" />
     <Content Include="MasterPage\assets\img\logo-black.png" />
     <Content Include="MasterPage\assets\img\logo.png" />
@@ -111,6 +116,9 @@
     <Content Include="MasterPage\assets\js\script.js" />
     <Content Include="MasterPage\assets\js\scroll-top.js" />
     <Content Include="MasterPage\assets\js\update\jquery.bxslider.js" />
+    <Content Include="Public\Album.aspx" />
+    <Content Include="Public\assets\Album\Album1\img1.jpg" />
+    <Content Include="Public\assets\Album\Album2\img1.jpg" />
     <Content Include="Public\assets\css\bootstrap-responsive.min.css" />
     <Content Include="Public\assets\css\bootstrap.css" />
     <Content Include="Public\assets\css\default.css" />
@@ -129,15 +137,21 @@
     <Content Include="Public\assets\img\4.jpg" />
     <Content Include="Public\assets\img\arrows.png" />
     <Content Include="Public\assets\img\backgroud.jpg" />
+    <Content Include="Public\assets\img\backgroud2.jpg" />
     <Content Include="Public\assets\img\banner.jpg" />
+    <Content Include="Public\assets\img\banner2.jpg" />
+    <Content Include="Public\assets\img\bgrGadient.jpg" />
     <Content Include="Public\assets\img\bg_direction_nav.png" />
     <Content Include="Public\assets\img\blurred-bg.jpg" />
     <Content Include="Public\assets\img\bullets.png" />
     <Content Include="Public\assets\img\glyphicons-halflings-white.png" />
     <Content Include="Public\assets\img\glyphicons-halflings.png" />
+    <Content Include="Public\assets\img\icon_phone02.png" />
+    <Content Include="Public\assets\img\img-bg2.jpg" />
     <Content Include="Public\assets\img\loading.gif" />
     <Content Include="Public\assets\img\logo-black.png" />
     <Content Include="Public\assets\img\logo.png" />
+    <Content Include="Public\assets\img\play-button.png" />
     <Content Include="Public\assets\img\update\cuongvest1.png" />
     <Content Include="Public\assets\img\update\cuongvest2.png" />
     <Content Include="Public\assets\img\update\phoneicon.png" />
@@ -150,12 +164,23 @@
     <Content Include="Public\assets\js\script.js" />
     <Content Include="Public\assets\js\scroll-top.js" />
     <Content Include="Public\assets\js\update\jquery.bxslider.js" />
+    <Content Include="Public\BanggiaDV.aspx" />
+    <Content Include="Public\GioiThieu.aspx" />
     <Content Include="Public\Home.aspx" />
+    <Content Include="Public\Lienhe.aspx" />
+    <Content Include="Public\NewAlbum.aspx" />
+    <Content Include="Public\Video.aspx" />
     <Content Include="Style.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBProvider\Album_DAO.cs" />
+    <Compile Include="DBProvider\BangGia_DB.cs" />
     <Compile Include="DBProvider\DataProvider.cs" />
+    <Compile Include="DBProvider\Donhang_DAO.cs" />
+    <Compile Include="DBProvider\Video_DAO.cs" />
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -170,13 +195,63 @@
     <Compile Include="MasterPage\MaterPage.Master.designer.cs">
       <DependentUpon>MaterPage.Master</DependentUpon>
     </Compile>
+    <Compile Include="MasterPage\MaterPageII.Master.cs">
+      <DependentUpon>MaterPageII.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\MaterPageII.Master.designer.cs">
+      <DependentUpon>MaterPageII.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ModelBanggia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Public\Album.aspx.cs">
+      <DependentUpon>Album.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Album.aspx.designer.cs">
+      <DependentUpon>Album.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\BanggiaDV.aspx.cs">
+      <DependentUpon>BanggiaDV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\BanggiaDV.aspx.designer.cs">
+      <DependentUpon>BanggiaDV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\GioiThieu.aspx.cs">
+      <DependentUpon>GioiThieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\GioiThieu.aspx.designer.cs">
+      <DependentUpon>GioiThieu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Public\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Public\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Lienhe.aspx.cs">
+      <DependentUpon>Lienhe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Lienhe.aspx.designer.cs">
+      <DependentUpon>Lienhe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\NewAlbum.aspx.cs">
+      <DependentUpon>NewAlbum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\NewAlbum.aspx.designer.cs">
+      <DependentUpon>NewAlbum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Video.aspx.cs">
+      <DependentUpon>Video.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Video.aspx.designer.cs">
+      <DependentUpon>Video.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +262,7 @@
     <Content Include="MasterPage\assets\fonts\UTM Swiss CondensedBold.ttf" />
     <Content Include="MasterPage\assets\fonts\UTM Swiss CondensedBold.woff" />
     <Content Include="MasterPage\MaterPage.Master" />
+    <Content Include="MasterPage\MaterPageII.Master" />
     <None Include="packages.config" />
     <Content Include="Public\assets\fonts\UTM Swiss Condensed.eot" />
     <Content Include="Public\assets\fonts\UTM Swiss Condensed.ttf" />
@@ -204,6 +280,7 @@
   <ItemGroup>
     <Folder Include="Admin\" />
     <Folder Include="MasterPage\assets\css\update\font-awesome\fonts\" />
+    <Folder Include="msc\" />
     <Folder Include="Public\assets\css\update\font-awesome\fonts\" />
   </ItemGroup>
   <PropertyGroup>

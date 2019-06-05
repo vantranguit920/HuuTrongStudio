@@ -4,9 +4,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
-	background:#FFFFFF url(../img/blurred-bg.jpg) fixed no-repeat;
-	background-size:140% 140%;
+    line-height: 1;
+    background: #FFFFFF fixed no-repeat;
+    background-image: url('../img/img-bg2.jpg');
+    background-size: 100% 100%;
 }
 ol, ul {
 	list-style: none;
@@ -61,6 +62,7 @@ header {
 
 header > .container {
 	background-color: rgba(255, 255, 255, .2);
+    /*background-color:dimgrey;*/
 }
 h1.logo {
 	margin: 40px 0px 30px 60px;
@@ -1671,4 +1673,3 @@ z-index:9999;
 top:0;
 background:#ededed;
 }
-

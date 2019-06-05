@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace HuuTrongStudio.DBProvider
 {
@@ -11,7 +12,7 @@ namespace HuuTrongStudio.DBProvider
     {
         private static DataProvider Instance;
 
-        private string ConnectionSTR = "";
+        private string ConnectionSTR = ConfigurationManager.ConnectionStrings["HTstudio"].ConnectionString;
         private DataProvider() { }
 
         public static DataProvider Instance1 {

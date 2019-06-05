@@ -1,7 +1,7 @@
 ﻿body {
     margin: 0;
     padding: 0;
-    background-image: url('Asset/Bgr.jpg');
+    background-image: url('Asset/img-bg-login.jpg');
     background-size: cover;
     font-family: sans-serif;
 }
@@ -14,7 +14,7 @@
     height:450px;
     padding: 80px 40px;
     box-sizing: border-box;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.4);
 }
 .lblEmail, .lblPass{
     font-weight: bold;
@@ -35,17 +35,17 @@
     font-size:16px;
     background-color:transparent;
 }
-.btnSubmit{
-    border:none;
-    outline:none;
-    height:40px;
-    font-size:16px;
-    color:#fff;
-    background-color: rgb(164, 62, 62);
-    cursor:pointer;
-    border-radius:20px;
+.btnSubmit {
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    background-color: blue;
+    cursor: pointer;
+    border-radius: 20px;
     transition: .3s ease-in-out;
 }
-.btnSubmit:hover{
-    background-color:rgb(237, 205, 29);
-}
+    .btnSubmit:hover {
+        background-color: red;
+    }
