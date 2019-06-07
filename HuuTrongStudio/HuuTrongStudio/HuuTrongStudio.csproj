@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -69,7 +73,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\AdminDashboard.aspx" />
+    <Content Include="Admin\assets\css\default.css" />
     <Content Include="Admin\assets\js\jquery-3.2.1.min.js" />
+    <Content Include="Admin\assets\js\jquery.filer.js" />
+    <Content Include="Admin\assets\js\jquery.filer.min.js" />
     <Content Include="Admin\DichVu.aspx" />
     <Content Include="Asset\backgroud.jpg" />
     <Content Include="Asset\Bagr.jpg" />
@@ -157,6 +164,7 @@
     <Content Include="Public\Home.aspx" />
     <Content Include="Style.css" />
     <Content Include="Admin\UploadImage.aspx" />
+    <Content Include="Admin\ThemAlbum.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -212,6 +220,13 @@
     </Compile>
     <Compile Include="Admin\UploadImage.aspx.designer.cs">
       <DependentUpon>UploadImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThemAlbum.aspx.cs">
+      <DependentUpon>ThemAlbum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThemAlbum.aspx.designer.cs">
+      <DependentUpon>ThemAlbum.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

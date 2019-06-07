@@ -114,3 +114,4 @@ C:\Users\TIEN\Documents\GitHub\HuuTrongStudio\HuuTrongStudio\HuuTrongStudio\obj\
 C:\Users\TIEN\Documents\GitHub\HuuTrongStudio\HuuTrongStudio\HuuTrongStudio\obj\Debug\HuuTrongStudio.csproj.CopyComplete
 C:\Users\TIEN\Documents\GitHub\HuuTrongStudio\HuuTrongStudio\HuuTrongStudio\obj\Debug\HuuTrongStudio.dll
 C:\Users\TIEN\Documents\GitHub\HuuTrongStudio\HuuTrongStudio\HuuTrongStudio\obj\Debug\HuuTrongStudio.pdb
+C:\Users\TIEN\Documents\GitHub\HuuTrongStudio\HuuTrongStudio\HuuTrongStudio\bin\AjaxControlToolkit.dll

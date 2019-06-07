@@ -15,7 +15,6 @@ namespace HuuTrongStudio
         {
             if (!IsPostBack)
             {
-                btnDelete.Enabled = false;
                 fillgridview();
             }
         }
@@ -29,7 +28,6 @@ namespace HuuTrongStudio
             txtNoidungloai.Text = "";
             txtTenloai.Text = "";
             lbThanhcong.Text = lbThatbai.Text = "";
-            btnDelete.Enabled = false;
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
@@ -49,6 +47,7 @@ namespace HuuTrongStudio
         void fillgridview()
         {
             gvTuongtacloai.DataSource = DataProvider.Instance1.ExecuteQuery("dbo.viewloaidichvu");
+          
             gvTuongtacloai.DataBind();
         }
         protected void Edit(object sender, EventArgs e)
@@ -67,7 +66,6 @@ namespace HuuTrongStudio
             txtTenloai.Text = (DataProvider.Instance1.ExecuteQuery("dbo.getTenloaidichvu @ID", new object[] { Convert.ToInt32(hfIDloai.Value) })).Rows[0]["TenLoaiDichVu"].ToString();
             txtNoidungloai.Text = (DataProvider.Instance1.ExecuteQuery("dbo.getNoidung @ID", new object[] { Convert.ToInt32(hfIDloai.Value) })).Rows[0]["NoiDung"].ToString();
             btnSave.Text = "Cập nhật";
-            btnDelete.Enabled = true;
         }
 
         protected void Deleteclick(object sender, EventArgs e)

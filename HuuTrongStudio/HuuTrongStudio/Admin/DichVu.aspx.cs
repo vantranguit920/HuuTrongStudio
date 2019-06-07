@@ -16,7 +16,6 @@ namespace HuuTrongStudio.Admin
         {
             if (!IsPostBack)
             {
-                btnDelete.Enabled = false;
                 fillgridview();
             }
         }
@@ -31,7 +30,6 @@ namespace HuuTrongStudio.Admin
             txtNoidung.Text = "";
             txtTen.Text = "";
             lbThanhcong.Text = lbThatbai.Text = "";
-            btnDelete.Enabled = false;
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
@@ -70,7 +68,6 @@ namespace HuuTrongStudio.Admin
             txtgia.Text = (DataProvider.Instance1.ExecuteQuery("dbo.getGia @ID", new object[] { Convert.ToInt32(hfID.Value) })).Rows[0]["Gia"].ToString();
             txtNoidung.Text = (DataProvider.Instance1.ExecuteQuery("dbo.Noidung @ID", new object[] { Convert.ToInt32(hfID.Value) })).Rows[0]["Noidung"].ToString();
             btnSave.Text = "Cập nhật";
-            btnDelete.Enabled = true;
         }
 
         protected void Deleteclick(object sender, EventArgs e)

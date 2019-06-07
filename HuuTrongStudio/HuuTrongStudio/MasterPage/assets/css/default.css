@@ -113,3 +113,7 @@ Supports Thumbs: true
 	width: 120px;
 	height: auto;
 }
+.banner {
+   height:300px;
+   width:auto;
+}
