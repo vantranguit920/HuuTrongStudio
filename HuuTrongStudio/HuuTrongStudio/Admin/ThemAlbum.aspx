@@ -91,6 +91,7 @@
         </table>
         <asp:Panel ID="Panel1" runat="server" BackColor="White" Height="529px" Width="702px">
             <table>
+
                 <tr>
                     <td colspan="2">
                         <asp:Label ID="Label1" runat="server" Text="Tên album"></asp:Label>
@@ -110,6 +111,7 @@
                     <td class="auto-style18">
 
                         <asp:FileUpload ID="FileUpload1" runat="server" AllowMultiple="True" style="display:none;" />
+                        <asp:Label ID="Label3" runat="server" ForeColor="#996600"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -216,6 +218,10 @@
     border-radius: 4px;
     border: 2px solid #f44336;
     margin-left:340px;
+    }
+
+    .auto-style1 {
+        height: 26px;
     }
 
 </style>

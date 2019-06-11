@@ -41,63 +41,71 @@ namespace HuuTrongStudio
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-
-            string id1 = (DataProvider.Instance1.ExecuteQuery("dbo.maxID")).Rows[0][0].ToString();
-            string id2= (DataProvider.Instance1.ExecuteQuery("dbo.getcurrid")).Rows[0][0].ToString();
-            path = "/Album/" + (DataProvider.Instance1.ExecuteQuery("dbo.getcurrid")).Rows[0][0].ToString() + "/";
-            anhdaidien();
-            if (hfIDloai.Value == "" && hfedit.Value == "")
+            if (txtTenAlbum.Text != null && !string.IsNullOrWhiteSpace(txtTenAlbum.Text))
             {
-                DataProvider.Instance1.ExecuteQuery("dbo.themalbum @ID , @Ten , @Path , @Pathimg ", new object[] {0,
-                txtTenAlbum.Text.Trim(), path.ToString(),pathimg.ToString() });
-                taomoithumuc();
-                //Them anh vao db
-                for (int i = 0; i < Request.Files.Count; i++)
+                string id1 = (DataProvider.Instance1.ExecuteQuery("dbo.maxID")).Rows[0][0].ToString();
+                string id2 = (DataProvider.Instance1.ExecuteQuery("dbo.getcurrid")).Rows[0][0].ToString();
+                path = "/Album/" + (DataProvider.Instance1.ExecuteQuery("dbo.getcurrid")).Rows[0][0].ToString() + "/";
+                anhdaidien();
+                if (hfIDloai.Value == "" && hfedit.Value == "")
                 {
-                    HttpPostedFile file = Request.Files[i];
-                    if (file.ContentLength > 0)
+                    DataProvider.Instance1.ExecuteQuery("dbo.themalbum @ID , @Ten , @Path , @Pathimg ", new object[] {0,
+                txtTenAlbum.Text.Trim(), path.ToString(),pathimg.ToString() });
+                    taomoithumuc();
+                    //Them anh vao db
+                    for (int i = 0; i < Request.Files.Count; i++)
                     {
-                        string fname = Path.GetFileName(file.FileName);
-                        String pathimg2 = pathtong.ToString() + path.ToString() + fname;
-                        //Insert chi tiet album
-                        file.SaveAs(Server.MapPath(Path.Combine(pathtong.ToString() + path.ToString(), fname)));
-                        DataProvider.Instance1.ExecuteQuery("dbo.themhoaccapnhatctalubm @ID , @IDalbum , @Path ", new object[] {0, id2.ToString(),
+                        HttpPostedFile file = Request.Files[i];
+                        if (file.ContentLength > 0)
+                        {
+                            string fname = Path.GetFileName(file.FileName);
+                            String pathimg2 = pathtong.ToString() + path.ToString() + fname;
+                            //Insert chi tiet album
+                            file.SaveAs(Server.MapPath(Path.Combine(pathtong.ToString() + path.ToString(), fname)));
+                            DataProvider.Instance1.ExecuteQuery("dbo.themhoaccapnhatctalubm @ID , @IDalbum , @Path ", new object[] {0, id2.ToString(),
                 pathimg2 });
-                        lbThatbai.Text = fname;
+                            lbThatbai.Text = fname;
+                        }
                     }
                 }
+                else
+                {
+                    string path3 = "/Album/" + a.ToString() + "/";
+                    for (int i = 0; i < Request.Files.Count; i++)
+                    {
+                        HttpPostedFile file = Request.Files[i];
+                        if (file.ContentLength > 0)
+                        {
+                            string fname = Path.GetFileName(file.FileName);
+                            String pathimg4 = pathtong.ToString() + path3.ToString() + fname;
+                            //Insert chi tiet album
+                            file.SaveAs(Server.MapPath(Path.Combine(pathtong.ToString() + path3.ToString(), fname)));
+                            DataProvider.Instance1.ExecuteQuery("dbo.capnhatctalbum @IDalbum , @Path ", new object[] {a.ToString(),
+                pathimg4 });
+                            lbThatbai.Text = fname;
+                        }
+                    }
+                    string b = DataProvider.Instance1.ExecuteQuery("dbo.getPathimg @ID", new object[] { a }).Rows[0][0].ToString();
+                    DataProvider.Instance1.ExecuteQuery("dbo.capnhatalbum @ID , @Pathimg", new object[] { a + 1, b.ToString() });
+                    show_dataid(a);
+                    ModalPopupExtender1.Show();
+                }
+                string id = hfIDloai.Value;
+                clear();
+                if (hfIDloai.Value == "")
+                    lbThanhcong.Text = "Lưu thành công!";
+                else
+                    lbThanhcong.Text = "Cập nhật thành công!";
+                fillgridview();
+                hfIDloai.Value = "";
+                btnSave.Text = "Lưu";
+                Label3.Text = "";
             }
             else
             {
-               string path3 = "/Album/" + a.ToString() + "/";
-                for (int i = 0; i < Request.Files.Count; i++)
-                {
-                    HttpPostedFile file = Request.Files[i];
-                    if (file.ContentLength > 0)
-                    {
-                        string fname = Path.GetFileName(file.FileName);
-                        String pathimg4 = pathtong.ToString() + path3.ToString() + fname;
-                        //Insert chi tiet album
-                        file.SaveAs(Server.MapPath(Path.Combine(pathtong.ToString() + path3.ToString(), fname)));
-                        DataProvider.Instance1.ExecuteQuery("dbo.capnhatctalbum @IDalbum , @Path ", new object[] {a.ToString(),
-                pathimg4 });
-                        lbThatbai.Text = fname;
-                    }
-                }
-                string b = DataProvider.Instance1.ExecuteQuery("dbo.getPathimg @ID", new object[] { a }).Rows[0][0].ToString();
-                DataProvider.Instance1.ExecuteQuery("dbo.capnhatalbum @ID , @Pathimg", new object[] { a + 1, b.ToString() });
-                show_dataid(a);
+                Label3.Text = "Tên album không hợp lệ!";
                 ModalPopupExtender1.Show();
             }
-            string id = hfIDloai.Value;
-            clear();
-            if (hfIDloai.Value == "")
-                lbThanhcong.Text = "Lưu thành công!";
-            else
-                lbThanhcong.Text = "Cập nhật thành công!";
-            fillgridview();
-            hfIDloai.Value = "";
-            btnSave.Text = "Lưu";        
         }
         private void fillgridview()
         {
@@ -115,7 +123,7 @@ namespace HuuTrongStudio
 
         protected void Editclick(object sender, EventArgs e)
         {
-           
+            txtTenAlbum.ReadOnly = true;
             int IDtable = Convert.ToInt32((sender as Button).CommandArgument);
             hfIDloai.Value = IDtable.ToString();
             hfedit.Value = IDtable.ToString();
@@ -184,6 +192,7 @@ namespace HuuTrongStudio
 
         protected void btn_them_Click(object sender, EventArgs e)
         {
+            txtTenAlbum.ReadOnly = false;
             hfIDloai.Value = "";
             clear();
             show_dataid(-1);
