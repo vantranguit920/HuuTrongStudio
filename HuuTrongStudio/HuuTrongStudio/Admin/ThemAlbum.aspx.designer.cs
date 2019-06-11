@@ -40,6 +40,15 @@ namespace HuuTrongStudio {
         protected global::System.Web.UI.WebControls.Button btn_them;
         
         /// <summary>
+        /// hfedit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfedit;
+        
+        /// <summary>
         /// lbThanhcong control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace HuuTrongStudio {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbThanhcong;
+        
+        /// <summary>
+        /// LinkButton2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
         
         /// <summary>
         /// lbThatbai control.
@@ -94,22 +112,22 @@ namespace HuuTrongStudio {
         protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
-        /// hfIDloai0 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfIDloai0;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// txtTenloai control.
+        /// txtTenAlbum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTenloai;
+        protected global::System.Web.UI.WebControls.TextBox txtTenAlbum;
         
         /// <summary>
         /// btn_close control.
@@ -121,6 +139,15 @@ namespace HuuTrongStudio {
         protected global::System.Web.UI.WebControls.Button btn_close;
         
         /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
         /// txtPath control.
         /// </summary>
         /// <remarks>
@@ -128,24 +155,6 @@ namespace HuuTrongStudio {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPath;
-        
-        /// <summary>
-        /// btnSave control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSave;
-        
-        /// <summary>
-        /// btnClear control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnClear;
         
         /// <summary>
         /// FileUpload1 control.
@@ -157,13 +166,22 @@ namespace HuuTrongStudio {
         protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
         
         /// <summary>
-        /// btn_saveimage control.
+        /// btn_upload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_saveimage;
+        protected global::System.Web.UI.WebControls.Button btn_upload;
+        
+        /// <summary>
+        /// btnSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSave;
         
         /// <summary>
         /// DataList1 control.

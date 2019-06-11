@@ -11,7 +11,7 @@ namespace HuuTrongStudio.DBProvider
     {
         private static DataProvider Instance;
 
-        private string ConnectionSTR = "Data Source=DESKTOP-LPFVQ7N;Initial Catalog=AoCuoi;Integrated Security=True";
+        private string ConnectionSTR = "Data Source=DESKTOP-LPFVQ7N;Initial Catalog=AoCuoiHT;Integrated Security=True";
         private DataProvider() { }
 
         public static DataProvider Instance1
