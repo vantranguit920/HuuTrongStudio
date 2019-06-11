@@ -42,7 +42,7 @@
                             <li>Email: AocuoiHTStudio@gmail.com</li>
                         </ul>
                         <div class="phone-contact clearfix">
-                            <img src="assets/img/icon_phone02.png" alt="">
+                            <img src="../assets/img/icon_phone02.png" alt="">
                             <div class="phone-number">
                                 <p>04.6684.6619 <span>(Tư vấn chụp ảnh)</span></p>
                                 <p>097.986.9861 <span>(Mr.Trong)</span></p>

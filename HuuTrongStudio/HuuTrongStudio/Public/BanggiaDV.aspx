@@ -34,7 +34,11 @@
                         <asp:BulletedList ID="BListDV" runat="server" BulletStyle="Disc"></asp:BulletedList>
                     </h4>
                     <p style="margin:10px;font-family:VnArabia;font-size:20px;text-align:justify" runat="server" id="h5ND">
-
+                        <asp:Repeater runat ="server" ID="rpcontent">
+                            <ItemTemplate>
+                                <p><%#Eval("noidungCT") %></p>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </p>
                     <br />
                     <br />

@@ -16,7 +16,7 @@
                                 <a href="Album.aspx?ID=<%#Eval("ID")%>&Name=<%#Eval("NAME") %>#content">
 
                                     <div class="col-md-4" style="margin: 2px; text-align: center">
-                                        <div class="thumbnail" style="background-color: #e40f6b">
+                                        <div class="thumbnail" style="background-color:darkgrey">
                                             <asp:Image ID="imgAlbum" CssClass="imgalbum" runat="server" ImageUrl='<%#Eval("PathImg")%>' />
                                         </div>
                                     </div>
@@ -95,7 +95,7 @@
                                             <asp:Image ID="imgAlbum" CssClass="imgalbum" runat="server" ImageUrl='<%#Eval("Img")%>' ImageAlign="Middle" Height="200" Width="300"></asp:Image>
 
                                             <div style="width: 50px; height: 50px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%)">
-                                                <img src="assets/img/play-button.png" />
+                                                <img src="../assets/img/play-button.png" />
                                             </div>
                                         </div>
 

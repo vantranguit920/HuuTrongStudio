@@ -34,6 +34,20 @@ namespace HuuTrongStudio.DBProvider
             return dt;
 
         }
+        public bool insertBG(string name, int gia,string nd,string ndct)
+        {
+            return DBProvider.DataProvider.Instance1.ExecuteNonQuery("EXEC usp_insertBG @Name , @Gia , @ND , @NDCT ",new object[] {name,gia,nd,ndct }) > 0;
+        }
+        public bool updateBG(int ID, string name, int gia, string nd, string ndct)
+        {
+            return DBProvider.DataProvider.Instance1.ExecuteNonQuery("EXEC usp_updateBG @ID , @Name , @Gia , @ND , @NDCT ", new object[] {ID, name, gia, nd, ndct }) > 0;
+        }
+        public Model.ModelBanggia getBGbyid(int id)
+        {
+            DataTable dt = DBProvider.DataProvider.Instance1.ExecuteQuery("SELECT * FROM dbo.Banggia WHERE ID = "+id);
+            return( new Model.ModelBanggia(dt.Rows[0]));
+
+        }
         public List<Model.ModelBanggia> getlistBG()
         {
             List<Model.ModelBanggia> list = new List<Model.ModelBanggia>();

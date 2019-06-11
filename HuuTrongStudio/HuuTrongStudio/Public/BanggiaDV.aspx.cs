@@ -35,6 +35,7 @@ namespace HuuTrongStudio.Public
         {
             string id = Request.QueryString["Name"];
             List<Model.ModelBanggia> list = (List<Model.ModelBanggia>)Session["listBG"];
+            List<Model.ModelBanggia> list2 = new List<Model.ModelBanggia>();
             foreach (Model.ModelBanggia bg in list)
             {
                 if (bg.Id.ToString() == id)
@@ -42,7 +43,10 @@ namespace HuuTrongStudio.Public
                     title.InnerText = "Gói: " + bg.Name + " Giá:  " + bg.Gia + " VND";
                     BListDV.DataSource = bg.ListKM;
                     BListDV.DataBind();
-                    h5ND.InnerText = bg.NoidungCT;
+                    //h5ND.InnerText = bg.NoidungCT;
+                    list2.Add(bg);
+                    rpcontent.DataSource = list2;
+                    rpcontent.DataBind();
                 }
             }
         }

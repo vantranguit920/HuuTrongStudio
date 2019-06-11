@@ -28,7 +28,7 @@
                                         <asp:Image ID="imgAlbum" CssClass="imgalbum" runat="server" ImageUrl='<%#Eval("Img")%>' ImageAlign="Middle" Height="200" Width="300"></asp:Image>
 
                                         <div style="width: 50px; height: 50px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%)">
-                                            <img src="assets/img/play-button.png" />
+                                            <img src="../assets/img/play-button.png" />
                                         </div>
                                     </div>
 
