@@ -16,6 +16,7 @@ namespace HuuTrongStudio
         static string path;
         static string pathimg;
         static int a;
+        static string pathtong = "~/assets";
         protected void Page_Load(object sender, EventArgs e)
         {
             btn_upload.Attributes.Add("onclick", "document.getElementById('" + FileUpload1.ClientID + "').click(); return false;");
@@ -57,9 +58,9 @@ namespace HuuTrongStudio
                     if (file.ContentLength > 0)
                     {
                         string fname = Path.GetFileName(file.FileName);
-                        String pathimg2 = "~/Public/assets/img" + path.ToString() + fname;
+                        String pathimg2 = pathtong.ToString() + path.ToString() + fname;
                         //Insert chi tiet album
-                        file.SaveAs(Server.MapPath(Path.Combine("~/Public/assets/img" + path.ToString(), fname)));
+                        file.SaveAs(Server.MapPath(Path.Combine(pathtong.ToString() + path.ToString(), fname)));
                         DataProvider.Instance1.ExecuteQuery("dbo.themhoaccapnhatctalubm @ID , @IDalbum , @Path ", new object[] {0, id2.ToString(),
                 pathimg2 });
                         lbThatbai.Text = fname;
@@ -75,9 +76,9 @@ namespace HuuTrongStudio
                     if (file.ContentLength > 0)
                     {
                         string fname = Path.GetFileName(file.FileName);
-                        String pathimg4 = "~/Public/assets/img" + path3.ToString() + fname;
+                        String pathimg4 = pathtong.ToString() + path3.ToString() + fname;
                         //Insert chi tiet album
-                        file.SaveAs(Server.MapPath(Path.Combine("~/Public/assets/img" + path3.ToString(), fname)));
+                        file.SaveAs(Server.MapPath(Path.Combine(pathtong.ToString() + path3.ToString(), fname)));
                         DataProvider.Instance1.ExecuteQuery("dbo.capnhatctalbum @IDalbum , @Path ", new object[] {a.ToString(),
                 pathimg4 });
                         lbThatbai.Text = fname;
@@ -95,7 +96,6 @@ namespace HuuTrongStudio
             else
                 lbThanhcong.Text = "Cập nhật thành công!";
             fillgridview();
-            hfedit.Value = "";
             hfIDloai.Value = "";
             btnSave.Text = "Lưu";        
         }
@@ -127,7 +127,7 @@ namespace HuuTrongStudio
         }
         private void taomoithumuc()
         {
-            string dir_s = Server.MapPath("~/Public/assets/img") + path.ToString();
+            string dir_s = Server.MapPath(pathtong.ToString()) + path.ToString();
             if (!Directory.Exists(dir_s))
             {
                 Directory.CreateDirectory(dir_s);
@@ -141,7 +141,7 @@ namespace HuuTrongStudio
             temp = Convert.ToInt32(hfIDloai.Value);
             pathid = (DataProvider.Instance1.ExecuteQuery("dbo.getPath @ID", new object[] { temp })).Rows[0]["Path"].ToString();
             delete(temp);
-            string dir_s = Server.MapPath("~/Public/assets/img") + pathid.ToString();
+            string dir_s = Server.MapPath(pathtong.ToString()) + pathid.ToString();
             if (Directory.Exists(dir_s))
             {
                 Directory.Delete(dir_s,true);
@@ -192,7 +192,7 @@ namespace HuuTrongStudio
 
         private void anhdaidien()
         {    
-            pathimg = "~/Public/assets/img" + path.ToString();
+            pathimg = pathtong.ToString() + path.ToString();
             for (int i = 0; i < Request.Files.Count; i++)
             {
                 HttpPostedFile file = Request.Files[i];
