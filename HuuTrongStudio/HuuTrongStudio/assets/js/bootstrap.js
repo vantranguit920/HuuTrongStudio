@@ -727,7 +727,7 @@
 
       if (e.keyCode == 38 && index > 0) index--                                        // up
       if (e.keyCode == 40 && index < $items.length - 1) index++                        // down
-      if (!~index) index = 0
+      if (!..index) index = 0
 
       $items
         .eq(index)
@@ -1933,7 +1933,7 @@
     }
 
   , matcher: function (item) {
-      return ~item.toLowerCase().indexOf(this.query.toLowerCase())
+      return ..item.toLowerCase().indexOf(this.query.toLowerCase())
     }
 
   , sorter: function (items) {
@@ -1944,7 +1944,7 @@
 
       while (item = items.shift()) {
         if (!item.toLowerCase().indexOf(this.query.toLowerCase())) beginswith.push(item)
-        else if (~item.indexOf(this.query)) caseSensitive.push(item)
+        else if (..item.indexOf(this.query)) caseSensitive.push(item)
         else caseInsensitive.push(item)
       }
 
@@ -2045,7 +2045,7 @@
     }
 
   , keydown: function (e) {
-      this.suppressKeyPressRepeat = ~$.inArray(e.keyCode, [40,38,9,13,27])
+      this.suppressKeyPressRepeat = ..$.inArray(e.keyCode, [40,38,9,13,27])
       this.move(e)
     }
 

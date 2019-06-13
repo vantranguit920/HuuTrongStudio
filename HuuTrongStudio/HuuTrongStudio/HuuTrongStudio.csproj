@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.18.1.1\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -68,12 +71,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Admin.aspx" />
     <Content Include="Admin\Blog.aspx" />
+    <Content Include="Admin\QlAlbum.ascx" />
+    <Content Include="Admin\QLAlbum.aspx" />
     <Content Include="Admin\QLBanggia.aspx" />
     <Content Include="Admin\ThemBG.aspx" />
     <Content Include="Admin\ThemVideo.aspx" />
-    <Content Include="assets\Album\Album1\img1.jpg" />
-    <Content Include="assets\Album\Album2\img1.jpg" />
     <Content Include="assets\css\bootstrap-responsive.min.css" />
     <Content Include="assets\css\bootstrap.css" />
     <Content Include="assets\css\default.css" />
@@ -90,6 +94,7 @@
     <Content Include="assets\fonts\UTM Swiss CondensedBold.svg" />
     <Content Include="assets\img\3.jpg" />
     <Content Include="assets\img\4.jpg" />
+    <Content Include="assets\img\iconnex.svg" />
     <Content Include="assets\img\arrows.png" />
     <Content Include="assets\img\backgroud.jpg" />
     <Content Include="assets\img\backgroud2.jpg" />
@@ -539,6 +544,7 @@
     <Content Include="ckeditor\skins\moono-lisa\images\refresh.png" />
     <Content Include="ckeditor\skins\moono-lisa\images\spinner.gif" />
     <Content Include="ckeditor\styles.js" />
+    <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="Public\Album.aspx" />
     <Content Include="Public\BanggiaDV.aspx" />
@@ -555,12 +561,33 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Blog.aspx.cs">
       <DependentUpon>Blog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Blog.aspx.designer.cs">
       <DependentUpon>Blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QlAlbum.ascx.cs">
+      <DependentUpon>QlAlbum.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QlAlbum.ascx.designer.cs">
+      <DependentUpon>QlAlbum.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QLAlbum.aspx.cs">
+      <DependentUpon>QLAlbum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QLAlbum.aspx.designer.cs">
+      <DependentUpon>QLAlbum.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\QLBanggia.aspx.cs">
       <DependentUpon>QLBanggia.aspx</DependentUpon>
@@ -590,12 +617,22 @@
     <Compile Include="DBProvider\Donhang_DAO.cs" />
     <Compile Include="DBProvider\VideoDB.cs" />
     <Compile Include="DBProvider\Video_DAO.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\MasterPageAdmin.Master.cs">
+      <DependentUpon>MasterPageAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\MasterPageAdmin.Master.designer.cs">
+      <DependentUpon>MasterPageAdmin.Master</DependentUpon>
     </Compile>
     <Compile Include="MasterPage\MaterPage.Master.cs">
       <DependentUpon>MaterPage.Master</DependentUpon>
@@ -701,6 +738,7 @@
     <Content Include="assets\fonts\UTM Swiss CondensedBold.eot" />
     <Content Include="assets\fonts\UTM Swiss CondensedBold.ttf" />
     <Content Include="assets\fonts\UTM Swiss CondensedBold.woff" />
+    <Content Include="MasterPage\MasterPageAdmin.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -710,6 +748,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="assets\Album\" />
     <Folder Include="assets\css\update\font-awesome\fonts\" />
     <Folder Include="msc\" />
   </ItemGroup>

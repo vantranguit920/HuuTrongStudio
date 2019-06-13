@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/MaterPageII.Master" AutoEventWireup="true" CodeBehind="Video.aspx.cs" Inherits="HuuTrongStudio.Public.Video" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="../MasterPage/MaterPageII.Master" AutoEventWireup="true" CodeBehind="Video.aspx.cs" Inherits="HuuTrongStudio.Public.Video" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="conten" runat="server">
     <div style="background-color: black">

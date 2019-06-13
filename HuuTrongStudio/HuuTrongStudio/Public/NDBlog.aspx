@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/MaterPageII.Master" AutoEventWireup="true" CodeBehind="NDBlog.aspx.cs" Inherits="HuuTrongStudio.Public.NDBlog" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="../MasterPage/MaterPageII.Master" AutoEventWireup="true" CodeBehind="NDBlog.aspx.cs" Inherits="HuuTrongStudio.Public.NDBlog" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="conten" runat="server">
     <div style="background-color: white">

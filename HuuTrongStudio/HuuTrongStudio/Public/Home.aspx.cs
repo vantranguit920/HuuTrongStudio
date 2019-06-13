@@ -32,7 +32,7 @@ namespace HuuTrongStudio.Public
         protected void btnXemthem_Click(object sender, EventArgs e)
         {
             Response.Redirect("NewAlbum.aspx");
-            //string dir_s = Server.MapPath("~/") + "NewAlbumxxx";
+            //string dir_s = Server.MapPath("../") + "NewAlbumxxx";
             //if (!Directory.Exists(dir_s))
             //{
             //    Directory.CreateDirectory(dir_s);

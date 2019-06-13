@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/MaterPageII.Master" AutoEventWireup="true" CodeBehind="GioiThieu.aspx.cs" Inherits="HuuTrongStudio.Public.GioiThieu" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="../MasterPage/MaterPageII.Master" AutoEventWireup="true" CodeBehind="GioiThieu.aspx.cs" Inherits="HuuTrongStudio.Public.GioiThieu" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="conten" runat="server">
     <div class="article-container">
         <h2>GIỚI THIỆU VỀ ÁO CƯỚI HTStudio : ĐĂNG KÝ ONLINE GIẢM THÊM 5% GIÁ ALBUM</h2>

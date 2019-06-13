@@ -61,7 +61,7 @@
     <div class="menu_nav">
         <nav class="navbar navbar-inverse">
             <div class="container">
-                <a href="Home.aspx">
+                <a href="../Public/Home.aspx">
                     <img class="logomobile" src="../assets/img/logo.png" alt="Áo Cưới Golden"></a>
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle btnmenumobile" data-toggle="collapse" data-target=".navbar-collapse">
@@ -88,7 +88,7 @@
         <div id="container" class="container" style="height: 100%;">
             <div class="row">
                 <div class="span3">
-                    <h1 class="logo"><a href="Home.aspx">
+                    <h1 class="logo"><a href="../Public/Home.aspx">
                         <img src="../assets/img/logo.png" /></a></h1>
                 </div>
                 <!--End span3 -->

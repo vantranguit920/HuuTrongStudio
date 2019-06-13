@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/MaterPageII.Master" AutoEventWireup="true" CodeBehind="QLBanggia.aspx.cs" Inherits="HuuTrongStudio.Admin.QLBanggia" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="../MasterPage/MasterPageAdmin.Master" AutoEventWireup="true" CodeBehind="QLBanggia.aspx.cs" Inherits="HuuTrongStudio.Admin.QLBanggia" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="conten" runat="server">
     <div class="Banggia" id="Banggia">
         <h2 style="color:white;margin-left:50px">Bảng giá dịch vụ</h2>

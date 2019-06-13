@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/MaterPageII.Master" AutoEventWireup="true" CodeBehind="NewAlbum.aspx.cs" Inherits="HuuTrongStudio.Public.NewAlbum" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="../MasterPage/MaterPageII.Master" AutoEventWireup="true" CodeBehind="NewAlbum.aspx.cs" Inherits="HuuTrongStudio.Public.NewAlbum" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="conten" runat="server">
      <div class="Album" id="Album">
 
@@ -16,7 +16,7 @@
 
                                     <div class="col-md-4" style="margin: 5px; text-align: center">
                                         <div class="thumbnail" style="background-color:#c08f4d">
-                                            <asp:Image ID="imgAlbum" CssClass="imgalbum" runat="server" ImageUrl='<%#Eval("PathImg")%>' />
+                                            <asp:Image ID="imgAlbum" CssClass="imgalbum" runat="server" ImageUrl='<%#Eval("PathImg")%>' Height="200px" Width="300px" />
                                         </div>
                                     </div>
                                 </a>

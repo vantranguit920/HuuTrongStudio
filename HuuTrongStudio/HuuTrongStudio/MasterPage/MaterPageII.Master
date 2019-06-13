@@ -20,6 +20,8 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/style_common.css" />
     <link rel="stylesheet" type="text/css" href="../assets/css/style1.css" />
     <link rel="stylesheet" type="text/css" href="../assets/css/update/jquery.bxslider.css" />
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../ckeditor/ckeditor.js"></script>
     <!--[if lt IE 9]>
                 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -48,7 +50,7 @@
                     <li><a href="../Public/GioiThieu.aspx">Giới thiệu</a></li>
                     <li><a href="../Public/BanggiaDV.aspx">Bảng giá</a></li>
                     <li><a href="../Public/BanggiaDV.aspx">Dịch vụ</a></li>
-                    <li><a href="../Public/NewAlbum.aspx"></a></li>
+                    <li><a href="../Public/NewAlbum.aspx">Album</a></li>
                     <li><a href="../Public/Blog.aspx">Cẩm nang cưới</a></li>
                     <li><a href="../Public/Lienhe.aspx">Liên hệ</a></li>
                 </ul>
@@ -72,7 +74,7 @@
                         <li><a href="../Public/GioiThieu.aspx">Giới thiệu</a></li>
                         <li><a href="../Public/BanggiaDV.aspx">Bảng giá</a></li>
                         <li><a href="../Public/BanggiaDV.aspx">Dịch vụ</a></li>
-                        <li><a href="../Public/NewAlbum.aspx"></a></li>
+                        <li><a href="../Public/NewAlbum.aspx">Album</a></li>
                         <li><a href="../Public/Blog.aspx">Cẩm nang cưới</a></li>
                         <li><a href="../Public/Lienhe.aspx">Liên hệ</a></li>
                     </ul>
@@ -98,7 +100,7 @@
                             <li><a href="../Public/GioiThieu.aspx">Giới thiệu</a></li>
                             <li><a href="../Public/BanggiaDV.aspx">Bảng giá</a></li>
                             <li><a href="../Public/BanggiaDV.aspx">Dịch vụ</a></li>
-                            <li><a href="../Public/NewAlbum.aspx"></a></li>
+                            <li><a href="../Public/NewAlbum.aspx">Album</a></li>
                             <li><a href="../Public/Blog.aspx">Cẩm nang cưới</a></li>
                             <li><a href="../Public/Lienhe.aspx">Liên hệ</a></li>
 

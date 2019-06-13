@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/MaterPageII.Master" AutoEventWireup="true" CodeBehind="Lienhe.aspx.cs" Inherits="HuuTrongStudio.Public.Lienhe" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="../MasterPage/MaterPageII.Master" AutoEventWireup="true" CodeBehind="Lienhe.aspx.cs" Inherits="HuuTrongStudio.Public.Lienhe" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="conten" runat="server">
     <div class="content">

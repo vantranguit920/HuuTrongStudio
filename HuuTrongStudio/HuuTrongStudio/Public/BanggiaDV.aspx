@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/MaterPageII.Master" AutoEventWireup="true" CodeBehind="BanggiaDV.aspx.cs" Inherits="HuuTrongStudio.Public.BanggiaDV" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="../MasterPage/MaterPageII.Master" AutoEventWireup="true" CodeBehind="BanggiaDV.aspx.cs" Inherits="HuuTrongStudio.Public.BanggiaDV" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="conten" runat="server">
 
