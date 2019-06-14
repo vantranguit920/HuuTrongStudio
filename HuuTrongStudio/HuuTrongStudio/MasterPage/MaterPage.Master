@@ -119,8 +119,11 @@
                 <div class="banner span12">
 
                     <ul class="bxslider">
+                        <li>
+                            <img id="imgbanner" style="width:100%;margin:auto"  src="../assets/img/banner2.jpg" />
+                        </li>
 
-                        <img id="imgbanner" src="../assets/img/banner2.jpg" />
+
 
                     </ul>
                     <script type="text/javascript">
