@@ -4,7 +4,7 @@
 
         <h2>ALBUM NỔI BẬT</h2>
         <div style="padding=50px; margin-left: 20px">
-            <asp:DataList ID="DataList1" runat="server" RepeatColumns="3" RepeatDirection="Horizontal">
+            <asp:DataList ID="DataList1" runat="server" RepeatColumns="4" RepeatDirection="Horizontal">
                 <ItemTemplate>
 
                     <table>

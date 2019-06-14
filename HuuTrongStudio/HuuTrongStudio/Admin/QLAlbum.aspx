@@ -97,7 +97,7 @@
                     <td class="auto-style18">
 
                         <asp:FileUpload ID="FileUpload1" runat="server" AllowMultiple="True" Style="display: none;" />
-                        <asp:Label ID="Label3" runat="server" ForeColor="#996600"></asp:Label>
+                       <asp:Label ID="Label3" runat="server" ForeColor="#996600"></asp:Label>
                     </td>
                 </tr>
                 <tr>

@@ -717,6 +717,13 @@
   <ItemGroup>
     <Content Include="MasterPage\MaterPage.Master" />
     <Content Include="MasterPage\MaterPageII.Master" />
+    <Content Include="assets\fonts\UTM Swiss Condensed.eot" />
+    <Content Include="assets\fonts\UTM Swiss Condensed.ttf" />
+    <Content Include="assets\fonts\UTM Swiss Condensed.woff" />
+    <Content Include="assets\fonts\UTM Swiss CondensedBold.eot" />
+    <Content Include="assets\fonts\UTM Swiss CondensedBold.ttf" />
+    <Content Include="assets\fonts\UTM Swiss CondensedBold.woff" />
+    <Content Include="MasterPage\MasterPageAdmin.Master" />
     <Content Include="ckeditor\CHANGES.md" />
     <Content Include="ckeditor\LICENSE.md" />
     <Content Include="ckeditor\plugins\scayt\CHANGELOG.md" />
@@ -732,13 +739,6 @@
     <Content Include="ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
     <Content Include="ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="ckeditor\skins\moono-lisa\readme.md" />
-    <Content Include="assets\fonts\UTM Swiss Condensed.eot" />
-    <Content Include="assets\fonts\UTM Swiss Condensed.ttf" />
-    <Content Include="assets\fonts\UTM Swiss Condensed.woff" />
-    <Content Include="assets\fonts\UTM Swiss CondensedBold.eot" />
-    <Content Include="assets\fonts\UTM Swiss CondensedBold.ttf" />
-    <Content Include="assets\fonts\UTM Swiss CondensedBold.woff" />
-    <Content Include="MasterPage\MasterPageAdmin.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

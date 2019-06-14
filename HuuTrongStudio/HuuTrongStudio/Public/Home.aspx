@@ -5,7 +5,7 @@
 
         <h2>ALBUM NỔI BẬT</h2>
         <div style="padding: 5px; margin-left: 20px">
-            <asp:DataList ID="DataList1" runat="server" RepeatColumns="3" RepeatDirection="Horizontal">
+            <asp:DataList ID="DataList1" runat="server" RepeatColumns="4" RepeatDirection="Horizontal">
                 <ItemTemplate>
 
                     <table>
@@ -41,8 +41,8 @@
     </div>
     <div class="Banggia" id="Banggia">
         <h2>Bảng giá dịch vụ</h2>
-        <div class="DTlist">
-            <asp:DataList runat="server" ID="DTlistBG" Height="50px" RepeatColumns="5" OnSelectedIndexChanged="DTlistBG_SelectedIndexChanged">
+        <div class="DTlist" style ="margin-left:60px">
+            <asp:DataList runat="server" ID="DTlistBG" Height="50px"  RepeatColumns="5" OnSelectedIndexChanged="DTlistBG_SelectedIndexChanged">
                 <ItemTemplate>
                     <div id="divBG" style="margin: 20px; border: thin; background-color: beige; text-align: center; width: 200px">
                         <div style="background-color: #e40f6b; height: 40px; padding: 5px; color: white">
